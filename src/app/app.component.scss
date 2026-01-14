@@ -1,0 +1,24 @@
+.app {
+  @apply relative min-h-screen bg-slate-900 overflow-hidden;
+}
+
+.app__wave {
+  /* ini ngikutin className input di AnimatedWaveComponent */
+  @apply absolute inset-0;
+}
+
+.app__content {
+  @apply relative z-10 pt-20; /* pt-20 biar gak ketutup navbar */
+}
+
+.app__section {
+  @apply mx-auto max-w-6xl px-6 text-white;
+}
+
+.app__title {
+  @apply text-4xl font-bold;
+}
+
+.app__subtitle {
+  @apply mt-2 text-white/80;
+}

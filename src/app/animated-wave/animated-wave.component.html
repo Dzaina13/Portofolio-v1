@@ -1,0 +1,19 @@
+<div class="wave-wrapper" [style.perspective]="'100%'">
+  <div
+    #container
+    class="relative inset-0 w-full h-screen z-10 overflow-hidden"
+    [ngClass]="className"
+    [ngStyle]="{
+      pointerEvents: 'none',
+      backgroundColor: backgroundColor || 'transparent'
+    }"
+  ></div>
+
+  <div
+    *ngIf="webGLFailed"
+    class="fallback absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white p-4 rounded-lg"
+  >
+    <p>WebGL Error: Unable to render animated wave.</p>
+    <p>Please ensure your browser & drivers are up to date.</p>
+  </div>
+</div>
