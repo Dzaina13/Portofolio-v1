@@ -1,27 +1,48 @@
 @use 'tailwindcss';
 
-
-.app {
-  @apply relative min-h-screen bg-slate-900 overflow-hidden;
+.app-container {
+  @apply relative w-full bg-slate-900 flex flex-col;
+  @apply min-h-screen overflow-x-hidden;
+  @apply pt-5 pb-10;
+  @apply md:h-screen md:overflow-hidden md:pt-[4.5rem] md:pb-[2rem];
 }
 
-.app__wave {
-  /* ini ngikutin className input di AnimatedWaveComponent */
-  @apply absolute inset-0;
+.page-card {
+  @apply flex flex-col md:flex-row w-full mx-auto relative z-10;
+  @apply max-w-6xl bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
+  @apply h-auto md:h-full;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.app__content {
-  @apply relative z-30 pt-20; /* pt-20 biar gak ketutup navbar */
+.left-sidebar {
+  @apply flex w-full h-auto flex-col justify-center items-center p-6;
+  @apply border-b border-white/5;
+  @apply md:w-1/3 md:h-full md:p-8 md:border-b-0 md:border-r;
 }
 
-.app__section {
-  @apply mx-auto max-w-6xl px-6 text-white;
+.right-content {
+  @apply flex-1 w-full h-auto overflow-visible p-4;
+  @apply md:h-full md:overflow-y-auto md:p-8;
+  scroll-behavior: smooth;
 }
 
-.app__title {
-  @apply text-4xl font-bold;
+.content-spacer {
+  @apply pb-0 md:pb-10;
 }
 
-.app__subtitle {
-  @apply mt-2 text-white/80;
+@media (min-width: 768px) {
+  .right-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  .right-content::-webkit-scrollbar-track {
+    background: transparent;
+    margin-block: 10px;
+  }
+  .right-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+  }
+  .right-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
 }
