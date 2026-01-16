@@ -1,11 +1,12 @@
 <div class="wave-wrapper" [style.perspective]="'100%'">
   <div
     #container
-    class="relative inset-0 w-full h-screen z-10 overflow-hidden"
+    class="!relative !z-0"
     [ngClass]="className"
     [ngStyle]="{
       pointerEvents: 'none',
-      backgroundColor: backgroundColor || 'transparent'
+      backgroundColor: backgroundColor || 'white',
+      cameraDistance: -1000
     }"
   ></div>
 
