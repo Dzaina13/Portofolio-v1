@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { AnimatedWaveComponent } from './animated-wave/animated-wave.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SectionComponent } from './section/section.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [AnimatedWaveComponent, NavbarComponent],
+  imports: [AnimatedWaveComponent, NavbarComponent,SectionComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
