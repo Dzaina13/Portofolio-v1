@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
                     {
                           role: 'Backend Developer',
                                 company: 'PT Infinys System Indonesia',
-                                      period: '2025 (4 Mos)',
+                                      period: 'January - April 2023',
                                             desc: [
                                                     'Developed backend services using JavaScript and Node.js',
                                                             'Migrated monolithic CMS architecture into Headless CMS (Directus)',
