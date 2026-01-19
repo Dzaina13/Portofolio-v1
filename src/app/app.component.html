@@ -33,9 +33,9 @@
 
     <section class="right-content custom-scrollbar">
       <div class="content-spacer">
-        <div id="about" class="text-gray/50  ext-sm font-light text-[1rem]">
+        <div id="about" class="text-gray/50  ext-sm font-light text-[1rem] ml-6" >
 
-<p class="mb-3">
+<p class="mb-3 ">
   I’m a <strong>full-stack</strong> developer passionate about building thoughtful, reliable, and high-quality digital products that balance clean design with solid engineering. I enjoy working at the intersection of frontend and backend, crafting experiences that are visually engaging, performant, and maintainable.
 </p>
 
@@ -50,10 +50,12 @@
 <p class="mb-17">
   Outside of coding, I love spending time with my cats, playing <strong>badminton</strong>, and actively joining <strong>business plan competitions</strong>. I’m curious, competitive in a good way, and always excited to turn ideas into real impact.
 </p>
+
+</div>
   
-<div id="experience" class="flex flex-col gap-2">
+<div id="experience" class="flex flex-col gap-2 group-hover:text-black" >
      <div *ngFor="let exp of experiences" 
-             class="group relative w-full p-1 pt-3 pb-3 rounded-[0.5rem] border border-transparent bg-transparent transition-all duration-300 hover:bg-white/20 hover:border-white/10 hover:shadow-lg cursor-default">
+             class="group relative w-full p-6 rounded-[1rem] border border-transparent bg-transparent transition-all duration-300 hover:bg-white/20 hover:border-white/10 hover:shadow-lg cursor-default">
                    
                          <div class="flex justify-between items-start mb-4">
                                   <div>
@@ -65,7 +67,8 @@
                                                                                                                 </p>
                                                                                                                          </div>
                                                                                                                                   
-                                                                                                                                           <span class="text-xs font-mono text-neutral-600 bg-black/20 px-2 py-1 rounded border border-white/5">
+                                                                                                                                           <span class="text-xs font-mono text-neutral-600 bg-white
+                                                                                                                                           /20 px-2 py-1 rounded border border-white/5">
                                                                                                                                                        {{ exp.period }}
                                                                                                                                                                 </span>
                                                                                                                                                                       </div>
@@ -80,42 +83,45 @@
                                                                                                                                                                                                                      </div>
 
 
-                                                                                                                                                                                                                     <div id="project" class="grid grid-cols-1 gap-6"> <div *ngFor="let proj of projects" 
-                                                                                                                                                                                                                              class="group relative w-full rounded-2xl border border-transparent bg-transparent transition-all duration-300 hover:bg-white/5 hover:border-white/10 hover:shadow-lg overflow-hidden">
-                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                          <div class="relative w-full h-48 bg-black/20 border-b border-white/5 overflow-hidden">
-                                                                                                                                                                                                                                                   <img [src]="proj.image" [alt]="proj.name" 
-                                                                                                                                                                                                                                                                 class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out">
-                                                                                                                                                                                                                                                                          
-                                                                                                                                                                                                                                                                                   <a [href]="proj.link" target="_blank" 
-                                                                                                                                                                                                                                                                                               class="absolute top-3 right-3 p-2 bg-black/50 hover:bg-white/20 backdrop-blur-md rounded-full text-white border border-white/10 transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
-                                                                                                                                                                                                                                                                                                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                                                                                                                                                                                                                                                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                                                                                                                                                                                                                                                                                                                      </svg>
-                                                                                                                                                                                                                                                                                                                                               </a>
-                                                                                                                                                                                                                                                                                                                                                     </div>
+<div id="project" class="grid grid-cols-1 mt-18 gap-6">
+   
+   <a *ngFor="let proj of projects" 
+      [href]="proj.link"
+      target="_blank"
+      class="group relative block w-full rounded-2xl border border-transparent bg-transparent transition-all duration-300 hover:bg-white/25 hover:shadow-2xl overflow-hidden cursor-pointer">
+      <div class="relative w-full h-48 bg-black/20 border-b border-white/5 overflow-hidden">
+         <img [src]="proj.image" [alt]="proj.name" 
+              class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out">
+         
+         <div class="absolute top-3 right-3 p-2 bg-black/50 group-hover:bg-black group-hover:text-white backdrop-blur-md rounded-full text-white border border-white/10 transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+         </div>
+      </div>
 
-                                                                                                                                                                                                                                                                                                                                                           <div class="p-6">
-                                                                                                                                                                                                                                                                                                                                                                    <div class="flex justify-between items-start mb-1">
-                                                                                                                                                                                                                                                                                                                                                                                <h3 class="text-lg font-bold text-neutral-200 group-hover:text-white transition-colors">
-                                                                                                                                                                                                                                                                                                                                                                                               {{ proj.name }}
-                                                                                                                                                                                                                                                                                                                                                                                                           </h3>
-                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+      <div class="p-6">
+         <div class="flex justify-between items-start mb-1">
+            <h3 class="text-lg font-bold text-neutral-500 group-hover:text-black transition-colors duration-300">
+               {{ proj.name }}
+            </h3>
+         </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                             <p class="text-sm text-neutral-500 mb-4 group-hover:text-neutral-400 transition-colors">
-                                                                                                                                                                                                                                                                                                                                                                                                                                         {{ proj.sub }}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                  </p>
+         <p class="text-sm text-neutral-400 mb-4 group-hover:text-neutral-600 transition-colors duration-300">
+            {{ proj.sub }}
+         </p>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                           <div class="flex flex-wrap gap-2 mt-auto">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <span class="text-xs font-medium text-neutral-400 bg-neutral-800/50 px-3 py-1 rounded-full border border-neutral-700/50 group-hover:border-neutral-600 group-hover:text-neutral-300 transition-all">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      {{ proj.tech }}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
-</div>
+         <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="text-xs font-medium text-neutral-400 bg-neutral-800/50 px-3 py-1 rounded-full border border-neutral-700/50 
+                         group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-300">
+               {{ proj.tech }}
+            </span>
+         </div>
+      </div>
+      
+   </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+
 
 </div>
       </section>

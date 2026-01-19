@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { AnimatedWaveComponent } from "./animated-wave/animated-wave.component";
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
     standalone: true,
-      imports: [RouterOutlet, NavbarComponent, AnimatedWaveComponent, CommonModule],
+      imports: [RouterOutlet, NavbarComponent, AnimatedWaveComponent, CommonModule, RouterLink],
         templateUrl: './app.component.html',
           styleUrl: './app.component.scss'
           })
@@ -35,16 +35,16 @@ import { CommonModule } from '@angular/common';
                                                                                                         {
                                                                                                               name: 'Sawargi Jaya',
                                                                                                                     sub: 'Boarding House Management System',
-                                                                                                                          tech: 'Laravel · GraphQL',
+                                                                                                                          tech: 'Laravel · GraphQL · n8n',
                                                                                                                                 image: 'https://placehold.co/600x400/1a1a1a/FFF?text=Sawargi+Project', // Placeholder
-                                                                                                                                      link: '#' 
+                                                                                                                                      link: 'https://sawargijayadeployrepo-production.up.railway.app' 
                                                                                                                                           },
                                                                                                                                               {
                                                                                                                                                     name: 'Āsvāda',
                                                                                                                                                           sub: 'AI Food Recommendation Platform',
-                                                                                                                                                                tech: 'Next.js · AI Integration',
+                                                                                                                                                                tech: 'Next.js · Tailwind ',
                                                                                                                                                                       image: 'https://placehold.co/600x400/1a1a1a/FFF?text=Asvada+Project',
-                                                                                                                                                                            link: '#'
+                                                                                                                                                                            link: 'https://asvada.vercel.app/'
                                                                                                                                                                                 },
                                                                                                                                                                                     {
                                                                                                                                                                                           name: 'Personal Portfolio',

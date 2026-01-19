@@ -17,11 +17,11 @@
 .left-sidebar {
   @apply flex w-full h-auto flex-col  p-6;
   @apply border-b border-white/5;
-  @apply md:w-9/20 md:h-full md:p-15 md:border-b-0 md:border-r;
+  @apply md:w-8/20 md:h-full md:p-15 md:border-b-0 md:border-r;
 }
 
 .right-content {
-  @apply flex-1 w-full h-auto overflow-visible p-8;
+  @apply flex-1 w-full h-auto overflow-visible;
   @apply md:h-full md:overflow-y-auto md:p-15;
   scroll-behavior: smooth;
 }
